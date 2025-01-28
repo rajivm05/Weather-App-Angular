@@ -4,9 +4,9 @@ const app = express();
 const axios = require('axios');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const DB_PASSWORD = 'mongousc2024' 
-const GEOCODING_KEY = 'AIzaSyDjKxdklB2CVPqND2bep5I2xfmuLkUFE1E';
-const WEATHER_KEY = 'RqRlSjWkYhLPg6XPPpwb28pnvOQDAVWZ';
+const DB_PASSWORD = 'mongousc' 
+const GEOCODING_KEY = 'AIzaSyDjKxdkkB2CVPqND2bep5I2xfmupkUFE1O'; 
+const WEATHER_KEY = 'RqRfSjWkYhLPf6XPPpwb28pnvOQDAVWZ';
 
 // app.use(cors());
 app.use(cors({
