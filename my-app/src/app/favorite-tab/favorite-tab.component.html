@@ -1,0 +1,47 @@
+@if(this.favorites.data.length > 0){
+    <table mat-table [dataSource]="favorites" class="favorite-table">
+        <!-- Index Column -->
+    <ng-container matColumnDef="index">
+        <th mat-header-cell *matHeaderCellDef> # </th>
+        <td mat-cell *matCellDef="let element; let i = index"> {{ i + 1 }} </td>
+    </ng-container>
+
+    <!-- City Column -->
+    <ng-container matColumnDef="city">
+        <th mat-header-cell *matHeaderCellDef> City </th>
+        <td mat-cell *matCellDef="let element; let i = index">
+        <a (click) = "renderData(i)" class="clickable-links">{{ element.city }}</a>
+        </td>
+    </ng-container>
+
+    <!-- State Column -->
+    <ng-container matColumnDef="state">
+        <th mat-header-cell *matHeaderCellDef> State </th>
+        <td mat-cell *matCellDef="let element; let i = index">
+        <a (click) = "renderData(i)" class="clickable-links">{{ element.state }}</a>
+        </td>
+    </ng-container>
+
+    <!-- Delete Column -->
+    <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let element; let i = index">
+         <button (click) = "removeData(i)" class=""><i class="bi bi-trash3"></i></button>
+        </td>
+    </ng-container>
+
+    <!-- Header and Row Definitions -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+ </table>
+}
+@else {
+    <div style="padding:1%">
+        <div class="row d-flex align-items-center" style="background-color: rgba(242, 240, 96, 0.625); padding:1%;">
+            <span>
+                <b>Sorry!</b> No records found.                
+            </span>
+        </div>
+    </div>
+}
+ 

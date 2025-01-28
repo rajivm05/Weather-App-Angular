@@ -1,0 +1,34 @@
+.details-header{
+    text-align: center;
+  }
+.weather-details {
+    padding:1%;
+    width: 100%;
+    /* border-collapse: collapse; */
+    font-family: Arial, sans-serif;
+}
+  
+.weather-details table {
+    border-collapse: collapse;
+}
+  
+.different {
+    background-color: rgba(51, 51, 51, 0.09);
+}
+.detail-row{
+    height: 50px;
+}
+.detail-row th{
+    padding:10px;
+    width: 35%;
+}
+.share-button{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #000;
+    display: flex;
+    color: #000;
+    align-items: center;
+    justify-content: center;
+}

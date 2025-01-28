@@ -1,0 +1,86 @@
+<div class="container mt-4 p-4 bg-light search-form-container">
+    <h3 class="text-center mb-4">Weather Search 🌥️</h3>
+    <form [formGroup]="weatherForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <label for="street" class="col-sm-2 col-form-label">Street<span class="text-danger">*</span></label>
+        <div class="col-sm-10">
+          <input type="text" id="street" class="form-control" formControlName="street" placeholder="" required (blur)="checkField('street')"/>
+          <div *ngIf="streetError" class="text-danger">
+            Please enter a valid street.
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <label for="city" class="col-sm-2 col-form-label">City<span class="text-danger">*</span></label>
+        <div class="col-sm-10">
+          <!-- <input type="text" id="city" class="form-control" formControlName="city" placeholder="" required (blur)="checkField('city')"/> -->
+          <input
+          type="text"
+          id="city"
+          matInput
+          class="form-control"
+          formControlName="city"
+          placeholder=""
+          [matAutocomplete]="auto"
+          (blur)="checkField('city')"
+        />
+        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectCity($event)">
+          <mat-option style="z-index:9999;"*ngFor="let cityState of filteredCities | async" [value]="cityState">
+            {{ cityState.name }}, {{ cityState.state }}
+          </mat-option>
+        </mat-autocomplete>
+          <div *ngIf="cityError" class="text-danger">
+            Please enter a valid city.
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <label for="state" class="col-sm-2 col-form-label">State<span class="text-danger">*</span></label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            id="state"
+            class="form-control state-text"
+            formControlName="state"
+            placeholder="Enter state"
+            (input)="filterStates()"
+            (blur)="checkField('state')"
+          />
+          <ul *ngIf="filteredStates.length > 0" class="list-group position-absolute">
+            <li
+              *ngFor="let state of filteredStates"
+              class="list-group-item"
+              (click)="selectState(state)"
+            >
+              {{ state.name }}
+            </li>
+          </ul>
+          <div *ngIf="stateError" class="text-danger">
+            Please enter a valid state.
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="row d-flex mb-2">
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="col-sm-6 d-flex align-items-center justify-content-center">
+              <label class="me-2">Autodetect Location<span class="text-danger">*</span></label>
+              <input type="checkbox" formControlName="autodetect" />
+              <label class="me-2">Current Location</label>
+            </div>
+      </div>
+      </div>
+      <div class="row d-flex justift-content-center">
+        <div class="col d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary me-2" [disabled]="weatherForm.invalid">
+            <i class="bi bi-search"></i> Search
+          </button>
+          <button type="button" class="btn btn-light clearButton" (click)="onClear()">
+            <i class="bi bi-list"></i> Clear
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>

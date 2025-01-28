@@ -1,0 +1,39 @@
+
+.data-container-upper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+  }
+.original-container{
+    width: 100%;
+    
+}
+.pane-upper-button{
+    margin: 0.5%;
+    border: none;
+    border-radius: 10%;
+    color: #0d6efd;
+    background-color: #fff;
+    padding:10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* height: 100%; */
+}
+.current-button{
+    background-color: #0d6efd;
+    color:#fff
+}
+.content-container-upper {
+    display: flex;
+    width: 200%; /* Allows sliding effect */
+    /* overflow-x: hidden; */
+    transform: translateX(0%);
+  }
+  
+  .list-view-upper,
+  .details-view-upper {
+    width: 50%; /* Each view takes up half the width of the container */
+    /* padding: 20px; */
+  }
+  

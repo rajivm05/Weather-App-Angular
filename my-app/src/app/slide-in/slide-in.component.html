@@ -1,0 +1,18 @@
+
+@if(this.dataService.rawData){
+    <div class="weather-container-result mt-3">
+        <div [@slideInOut]="this.animationService.viewMode" class="content-container">
+            <div class="list-view">
+                <app-results-tab></app-results-tab>
+            </div>
+        
+            <!-- Details View -->
+            <div class="details-view">
+              <div class="row d-flex align-items-center">
+                 <app-details-table></app-details-table>
+            </div>
+          </div>
+        </div>
+    </div>
+}    
+

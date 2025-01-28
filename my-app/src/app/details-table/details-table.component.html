@@ -1,0 +1,59 @@
+<div class="row mt-2">
+    <div class="col-2">
+        <button mat-button (click)="callToggleService()"><i class="bi bi-chevron-left"></i>List</button>
+    </div>
+    
+    <div class="col-8">
+        <h3 class="details-header">{{extendedWeatherData[this.dataService.pointToDate].date}}</h3>
+    </div>
+    <div class="col-2 d-flex justify-content-end">
+        <!-- <button mat-button><i class=""></i>Share</button> -->
+        <a class="share-button" target = "_blank" href="https://twitter.com/intent/tweet?text={{renderContent()}}%20%23CSCI571WeatherForecast"><i class="bi bi-twitter-x"></i></a>
+    </div>
+</div>
+
+<div class="row weather-details">
+    <table>
+        <tr class="different detail-row">
+          <th>Status</th>
+          <td>{{extendedWeatherData[this.dataService.pointToDate].status}}</td>
+        </tr>
+        <tr class="detail-row">
+          <th>Max Temperature</th>
+          <td>{{extendedWeatherData[this.dataService.pointToDate].tempHigh}}°F</td>
+        </tr>
+        <tr class="different detail-row">
+          <th>Min Temperature</th>
+          <td>{{extendedWeatherData[this.dataService.pointToDate].tempLow}}°F</td>
+        </tr>
+        <tr class="detail-row">
+          <th>Apparent Temperature</th>
+          <td>{{extendedWeatherData[this.dataService.pointToDate].apparentTemperature}}°F</td>
+        </tr>
+        <tr class="different detail-row">
+          <th>Sun Rise Time</th>
+          <td>{{extendedWeatherData[this.dataService.pointToDate].sunriseTime}}</td>
+        </tr>
+        <tr class="detail-row">
+          <th>Sun Set Time</th>
+          <td>{{extendedWeatherData[this.dataService.pointToDate].sunsetTime}}</td>
+        </tr>
+        <tr class="different detail-row">
+          <th>Humidity</th>
+          <td>{{extendedWeatherData[this.dataService.pointToDate].humidity}}%</td>
+        </tr>
+        <tr class="detail-row">
+          <th>Wind Speed</th>
+          <td>{{extendedWeatherData[this.dataService.pointToDate].windSpeed}} mph</td>
+        </tr>
+        <tr class="different detail-row">
+          <th>Visibility</th>
+          <td>{{extendedWeatherData[this.dataService.pointToDate].visibility}} mi</td>
+        </tr>
+        <tr class="detail-row">
+          <th>Cloud Cover</th>
+          <td>{{extendedWeatherData[this.dataService.pointToDate].cloudCover}}%</td>
+        </tr>
+      </table>
+</div>
+<app-map-pointer></app-map-pointer>

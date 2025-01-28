@@ -1,0 +1,22 @@
+.text-danger{
+    color: red;
+}
+.state-text{
+    width: 40%;
+}
+.position-relative {
+    position: relative;
+  }
+  
+.list-group {
+/* max-height: 150px;
+overflow-y: auto; */
+z-index: 1000;
+}
+
+.clearButton{
+    border: 1px solid #000;
+}
+mat-option{
+    z-index: 1000;
+}

@@ -1,0 +1,15 @@
+.heading-div{
+    text-align: center;
+}
+.icon-class{
+    height: 40px;
+    width:20%;
+}
+.favorites-details-item{
+    align-items: center;
+    justify-content: end;
+}
+.wannabe-links{
+    color: rgba(44, 44, 219, 0.87);
+    text-decoration: underline;
+}

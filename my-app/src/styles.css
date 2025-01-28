@@ -1,0 +1,95 @@
+/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.WC1000{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/clear_day.svg");
+    background-repeat: no-repeat;
+}
+.WC1100{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/mostly_clear_day.svg");
+    background-repeat: no-repeat;
+}
+.WC1101{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/partly_cloudy_day.svg");
+    background-repeat: no-repeat;
+}
+.WC1102{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/mostly_cloudy.svg");
+    background-repeat: no-repeat;
+}
+.WC1001{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/cloudy.svg");
+    background-repeat: no-repeat;
+}
+.WC2000{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/fog.svg");
+    background-repeat: no-repeat;
+}
+.WC2100{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/fog_light.svg");
+    background-repeat: no-repeat;
+}
+.WC8000{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/tstorm.svg");
+    background-repeat: no-repeat;
+}
+.WC5001{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/flurries.svg");
+    background-repeat: no-repeat;
+}
+.WC5100{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/snow_light.svg");
+    background-repeat: no-repeat;
+}
+.WC5000{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/snow.svg");
+    background-repeat: no-repeat;
+}
+.WC5101{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/snow_heavy.svg");
+    background-repeat: no-repeat;
+}
+.WC7102{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/ice_pellets_light.svg");
+    background-repeat: no-repeat;
+}
+.WC7000{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/ice_pellets.svg");
+    background-repeat: no-repeat;
+}
+.WC7101{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/ice_pellets_heavy.svg");
+    background-repeat: no-repeat;
+}
+.WC4000{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/drizzle.svg");
+    background-repeat: no-repeat;
+}
+.WC6000{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/freezing_drizzle.svg");
+    background-repeat: no-repeat;
+}
+.WC6200{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/freezing_rain_light.svg");
+    background-repeat: no-repeat;
+}
+.WC6001{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/freezing_rain.svg");
+    background-repeat: no-repeat;
+}
+.WC6201{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/freezing_rain_heavy.svg");
+    background-repeat: no-repeat;
+}
+.WC4200{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/rain_light.svg");
+    background-repeat: no-repeat;
+}
+.WC4001{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/rain.svg");
+    background-repeat: no-repeat;
+}
+.WC4201{
+    background-image: url("./Weather\ Symbols\ for\ Weather\ Codes/rain_heavy.svg");
+    background-repeat: no-repeat;
+}
